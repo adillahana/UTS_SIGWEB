@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Leaflet Web Map</title>
+
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+   integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+   crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+   integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+   crossorigin=""></script>
+ 
+ <style>
+    body
+    {
+        position: relative;
+        height: 100%;
+        background-color: #273a43;
+    }
+
+    html
+    {
+        scroll-behavior: smooth;
+    }
+
+    #map {
+    width: 1500px;
+    height: 1500px;
+    } 
+ </style>
+
+</head>
+
+<body>
+    <center>
+        <div id="map"></div>
+    </center>
+<script>
+    var map = L.map('map',{
+        center:[ -7.776307,110.381761],
+        zoom: 16
+    });
+
+    L.tileLayer('https://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            maxZoom: 20, 
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        })
+             .addTo(map);
+
+    var marker = L.marker([ -7.769335, 110.378173]).
+    bindPopup('<center><h2>Perpustakaan UGM</h2><justify><a href="https://maps.app.goo.gl/WqgymHoeJKcmPu7j9">Perpustakaan UGM</a> menjadi tempat favorit untuk mengerjakan tugas karena tersedia tempat untuk mengerjakan tugas gratis dengan suasana yang nyaman dan internet yang lancar.<br><br><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftpb.tp.ugm.ac.id%2Fen%2Ffasilitas%2Fperpustakaan%2Fperpustakaan-universitas&psig=AOvVaw0ZmeGruXY8CNj9uC9E0cqK&ust=1696921251499000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJCOxLuy6IEDFQAAAAAdAAAAABAf" width="150px" height="100px"></center>').addTo(map);  
+    
+    var marker = L.marker([ -7.764012,110.372677]).
+    bindPopup('<center><h2>Teknik Geodesi UGM</h2><justify><a href="https://geodesi.ugm.ac.id/">Teknik Geodesi</a> UGM menjadi tempat favorit karena merupakan kampus tercinta.<br><br><img src="https://www.google.com/imgres?imgurl=http%3A%2F%2Fgeodesi.ugm.ac.id%2Fwp-content%2Fuploads%2Fsites%2F695%2F2021%2F03%2FPhoto500003-Enhanced-1-1024x527.jpg&tbnid=Z1V9m8W098opsM&vet=12ahUKEwiOt-f0s-iBAxWwm2MGHT7_CkEQMygAegQIARBM..i&imgrefurl=https%3A%2F%2Fgeodesi.ugm.ac.id%2Fsejarah%2F&docid=s92nlLsESS3nYM&w=1024&h=527&q=teknik%20geodesi%20ugm&ved=2ahUKEwiOt-f0s-iBAxWwm2MGHT7_CkEQMygAegQIARBM" width="150px" height="100px"></center>').addTo(map);
+
+    var marker = L.marker([  -7.770459, 110.382011]).
+    bindPopup('<center><h2>Wisdom Park UGM</h2><justify> <a href="https://maps.app.goo.gl/2JYAVfox7kLXFmTZ9"> Wisdom Park</a> menjadi tempat favorit untuk berolahraga maupun bersantai dan bermain bersama teman-teman karena tempatnya yang nyaman dan sejuk.<br><br><img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fasset-2.tstatic.net%2Fjogja%2Ffoto%2Fbank%2Fimages%2Fwisdom-park-atau-taman-kearifan-ugm.jpg&tbnid=AVsFUl_USQ0T0M&vet=12ahUKEwjuiqvZtOiBAxVx3DgGHROTCPkQMygBegQIARBM..i&imgrefurl=https%3A%2F%2Fjogja.tribunnews.com%2F2021%2F02%2F06%2Fmenikmati-alam-asri-nan-cantik-di-wisdom-park-ugm-yang-kini-kian-rapi&docid=vRbWO-07lm0ReM&w=700&h=393&q=wisdm%20park%20ugm&ved=2ahUKEwjuiqvZtOiBAxVx3DgGHROTCPkQMygBegQIARBM" width="150px" height="100px"></center>').addTo(map);
+
+    var marker = L.marker([ -7.772058,110.382249]).
+    bindPopup('<center><h2>GOR Lembah UGM</h2><justify><a href="https://maps.app.goo.gl/a1N2ptJLsomJEvce9">GOR Lembah</a> menjadi salah satu tempat favorit untuk berolahraga karena fasilitas lapangan dan fitness yang cukup lengkap.<br><br><img src="https://www.google.com/imgres?imgurl=http%3A%2F%2Fresidence.ugm.ac.id%2Fwp-content%2Fuploads%2Fsites%2F1094%2F2020%2F03%2FDSC09270-300x200.jpg&tbnid=uwgDfiUiY0H_FM&vet=12ahUKEwizj4bLteiBAxUh2jgGHQGICLwQMygAegQIARBK..i&imgrefurl=https%3A%2F%2Fresidence.ugm.ac.id%2F2020%2F03%2F02%2Fgedung-olah-raga-gor-di-wisdom-park%2F&docid=ZPtQB6LVVzrAEM&w=300&h=200&q=gor%20lembah%20ugm&ved=2ahUKEwizj4bLteiBAxUh2jgGHQGICLwQMygAegQIARBK" width="150px" height="100px"></center>').addTo(map);
+    
+    var marker = L.marker([  -7.771672,110.381518]).
+    bindPopup('<center><h2>Pusat Jajanan Lembah (Pujale)</h2><justify> <a href="https://maps.app.goo.gl/G36HLCz9r9JsrnYc8"> Pujale </a> menjadi tempat favorit untuk makan siang dan jajan bersama teman-teman karena banyak jenis makanan yang dapat dicoba.<br><br><img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fkagama.co%2Fwp-content%2Fuploads%2F2019%2F04%2FWhatsApp-Image-2019-03-30-at-22.44.24-2-e1554192787364.jpeg&tbnid=0pQ7ohsZ9xUEOM&vet=12ahUKEwihya-YtuiBAxX_j2MGHW-GCCIQMygAegQIARBI..i&imgrefurl=https%3A%2F%2Fkagama.co%2F2019%2F04%2F02%2Fpujale-tetap-jadi-tempat-favorit-saat-keroncongan%2F&docid=8VKNxI1xv1hPvM&w=700&h=394&q=pujale%20ugm&ved=2ahUKEwihya-YtuiBAxX_j2MGHW-GCCIQMygAegQIARBI" width="150px" height="100px"></center>').addTo(map);
+
+</script>
+</body>
+</html>

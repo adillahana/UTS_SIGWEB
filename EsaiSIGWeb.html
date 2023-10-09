@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <title>UTS SIG berbasis Web</title>
+    <body>
+        <table style="width:30" border="2">
+            <tr>
+                <th>Nama</th>
+                <td>Adilla Hana Salsabila</td>
+            </tr>
+            <tr>
+                <th>NIM</th>
+                <td>20/460238/TK/50827</td>
+            </tr>
+        </table>
+
+        <center><h1 style="color:rgb(154, 182, 226);">UTS SIG berbasis Web</h1></center>
+
+        <h2 style="color:rgb(106, 184, 153)">Apa itu Sistem Informasi Geografis Berbasis Web?</h2>
+        <p align="justify">SIG merupakan aplikasi Sistem Informasi Geografis (SIG) yang dapat diakses secara online melalui internet atau web. Pada konfigurasi SIGWeb ada server yang berfungsi sebagai Map Server yang bertugas memproses permintaan peta dari client dan
+            kemudian mengirimkannya kembali ke client. Dalam hal ini pengguna/client tidak perlu mempunyai software SIG, hanya menggunakan internet browser seperti internet explorer, mozilla firefox, atau google chrome untuk mengakses
+            informasi SIG yang ada di server (Sunaryo, 2015).</p>
+        <p align="justify">Sistem Informasi Geografis Web menjadi salah satu mata kuliah yang disediakan oleh <a href="https://geodesi.ugm.ac.id/">
+            Departemen Teknik Geodesi UGM </a>  untuk mahasiswanya sebagai mata kuliah pilihan. Mata kuliah Praktikum SIG Berbasis Web membahas mengenai bagaimana data dan informasi geospasial ditampilkan melalui internet, baik pada platform berupa desktop, mobile maupun media lainnya. Mata kuliah ini dimulai dari pembahasan mengenai cara kerja internet dan halaman web, konsep dan cara kerja client dan server pada WebGIS, arsitektur WebGIS serta desain dan evaluasi WebGIS.</p>
+
+        <h3>Bagaimana internet bekerja?</h3>
+        <p>Internet menggunakan kabel fiber optic dimana konduktornya lebih baik dibandingkan udara.</p>
+        <p>Adapun komponen-komponen dalam internet adalah sebagai berikut:</p>
+        <p><b><i>Client</i></b>, adalah perangkat yang melakukan akses terhadap webside (orang/manusia yang mengakses juga dapat disebut sebagai client).</p>
+        <p><b><i>Server</i></b>, adalah perangkat keras maupun lunak komputer yang berfungsi untuk menyimpan halaman web pada alamat tertentu.</p>
+        <p><b>Komunikasi antara client dan server</b> dilakukan dengan bahasa dan protokol tertentu sehingga membentuk internet.</p>
+
+        <h3>Bagaimana Client dan Server dapat Berkomunikasi satu sama lain?</h3>
+        <p>Hal-hal yang dibutuhkan untuk komunikasi antara <i>client</i> dan <i>server</i> adalah sebagai berikut:</p>
+        <p>1. <i>Languages</i></p>
+        <p>2. <i>Transfer Medium</i></p>
+        <p>3. <i>Signs</i></p>
+        <p>4. <i>Two sets of brain</i></p>
+        <p>5. <i>Two sets of Lips</i></p>
+
+        <h4>Daftar Pustaka</h4>
+        <p>Sunaryo, Dedy K. 2015. Sistem Informasi Dan Geografis Dan Aplikasinya. Malang: Penerbit CV. Dream Litera Buana.</p>
+        <p></p>
+
+        <h1 style="color:rgb(244, 164, 148);"">Validasi Pekerjaan</h1>
+        <p>Masukkan nama, password dan alamat email anda:</p>
+        <div class="login">
+        <div id="error" class="alert alert-danger" role="alert">
+        </div>
+        <form action="#" method="get" id="form">
+        <label>Nama:</label>
+        <input type="text" name="nama" placeholder="Masukkan Nama Anda"/><br>
+        <label>Password:</label>
+        <input type="text" name="password" placeholder="Masukkan Password Anda"/>
+        <input onclick="login()" type="button" value="Klik" class="tombol">
+    </div></form>
+    <script>
+        function login()
+        {
+            var nama = document.forms["form"]["nama"].value;
+            var password = document.forms["form"]["password"].value;
+                if (nama == "") {
+                    alert("Isikan nama Anda!");
+                    return false;
+                }
+                if (password == "selesai") {
+                    alert("Pekerjaan Anda sudah selesai!");
+                }
+                else{
+                    alert("error");
+                    return false;
+                }
+        }
+    </script>
+    </div>
+
+    <h3>Peta 5 Tempat Favorit di UGM</h3>
+    <a href="../UTS_SIGWEB/TempatFavoritUGM.html"> Link ini mengarah ke Peta Tempat Favorit</a>
+    </body>
+</html>
